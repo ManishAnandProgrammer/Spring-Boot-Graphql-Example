@@ -1,0 +1,38 @@
+graphql:
+  servlet:
+    enabled: true
+    mapping: /graphql
+    cors-enabled: true
+    cors:
+      allowed-origins: "*"
+      allowed-methods: GET, HEAD, POST
+    exception-handlers-enabled: true
+    context-setting: PER_REQUEST_WITH_INSTRUMENTATION
+    async-mode-enabled: true
+  playground:
+    endpoint: /playground
+    subscriptionEndpoint: /subscriptions
+    enabled: false
+  graphiql:
+    mapping: /graphiql
+    endpoint:
+      graphql: /graphql
+      subscriptions: /subscriptions
+    subscriptions:
+      timeout: 30
+      reconnect: false
+    basePath: /
+    enabled: false
+    pageTitle: GraphiQL
+    cdn:
+      enabled: false
+      version: latest
+    props:
+      resources:
+        query: query.graphql
+        defaultQuery: defaultQuery.graphql
+        variables: variables.graphql
+      variables:
+        editorTheme: "solarized light"
+
+

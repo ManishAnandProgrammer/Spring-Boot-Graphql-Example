@@ -1,0 +1,29 @@
+scalar String
+scalar Int
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+type Query {
+    getStudents: [Student]!
+    getStudent(id: Int): Student
+}
+
+type Mutation {
+    saveStudent(studentInput: StudentInput): Student!
+}
+
+input StudentInput {
+    name: String!
+    phone: String!
+    rollNo: Int!
+}
+
+type Student {
+    id: Int
+    name: String
+    phone: String
+    rollNo: Int
+}
