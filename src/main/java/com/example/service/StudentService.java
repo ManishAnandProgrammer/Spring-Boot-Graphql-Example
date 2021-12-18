@@ -1,6 +1,7 @@
 package com.example.service;
 
 import com.example.domain.Student;
+import com.example.exceptions.ResourceNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ public class StudentService {
         return students.stream()
                 .filter(student -> student.getId().equals(id))
                 .findFirst()
-                .orElseThrow(() -> new RuntimeException("Record Not found with Given Id" + id));
+                .orElseThrow(() -> new ResourceNotFoundException(Student.class, id));
     }
 
     public Student save(Student student) {
