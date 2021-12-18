@@ -53,5 +53,30 @@ graphql:
       hideRoot: false
     hideDocs: false
     hideSettings: false
+  altair:
+    enabled: true
+    mapping: /altair
+    subscriptions:
+      timeout: 30
+      reconnect: false
+    static:
+      base-path: /
+    page-title: Altair
+    cdn:
+      enabled: false
+      version: 4.0.2
+    options:
+      endpoint-url: /graphql
+      subscriptions-endpoint: /subscriptions
+      initial-settings:
+        theme: dracula
+      initial-headers:
+        Authorization: "Bearer <your-token>"
+    resources:
+      initial-query: defaultQuery.graphql
+      initial-variables: variables.graphql
+      initial-pre-request-script: pre-request.graphql
+      initial-post-request-script: post-request.graphql
+
 
 

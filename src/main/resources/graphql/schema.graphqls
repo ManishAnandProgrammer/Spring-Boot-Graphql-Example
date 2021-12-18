@@ -13,4 +13,5 @@ type Query {
 
 type Mutation {
     saveStudent(studentInput: StudentInput!): Student!
+    uploadStudentDocument: Int!
 }
