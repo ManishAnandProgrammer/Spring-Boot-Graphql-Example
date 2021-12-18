@@ -2,7 +2,6 @@ package com.example;
 
 import com.example.domain.Student;
 import com.example.service.StudentService;
-import com.github.javafaker.Avatar;
 import com.github.javafaker.Faker;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,9 +14,11 @@ import java.util.stream.IntStream;
 public class SpringBootGraphqlApplication {
 
 	private final StudentService studentService;
+	private final Faker faker;
 
-	public SpringBootGraphqlApplication(final StudentService studentService) {
+	public SpringBootGraphqlApplication(final StudentService studentService, Faker faker) {
 		this.studentService = studentService;
+		this.faker = faker;
 	}
 
 	public static void main(String[] args) {
@@ -26,7 +27,6 @@ public class SpringBootGraphqlApplication {
 
 	@EventListener(ApplicationReadyEvent.class)
 	private void fillStudents() {
-		Faker faker = new Faker();
 		IntStream.range(1, 100).forEach(value -> {
 			Student student = new Student();
 			String fullName = faker.name().fullName();

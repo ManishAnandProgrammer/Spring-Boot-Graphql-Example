@@ -14,6 +14,8 @@ public class AddressResolver implements GraphQLResolver<Student> {
     private static final Logger LOGGER = LoggerFactory.getLogger(AddressResolver.class);
 
     public Address address(Student student) {
+        LOGGER.info("came to fetch address for student {} with thread {}", student.getId(),
+                Thread.currentThread().getName());
         // to replicate latency
         // suppose this address coming from
         // another microservice

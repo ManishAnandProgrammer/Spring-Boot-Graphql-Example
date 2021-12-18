@@ -10,4 +10,5 @@ type Student {
     phone: String
     rollNo: Int
     address: Address
+    family: Family
 }
