@@ -8,9 +8,9 @@ schema {
 
 type Query {
     getStudents: [Student]!
-    getStudent(id: Int): Student
+    getStudent(id: Int!): Student
 }
 
 type Mutation {
-    saveStudent(studentInput: StudentInput): Student!
+    saveStudent(studentInput: StudentInput!): Student!
 }

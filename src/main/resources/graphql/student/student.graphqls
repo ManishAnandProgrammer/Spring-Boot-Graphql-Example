@@ -5,8 +5,9 @@ input StudentInput {
 }
 
 type Student {
-    id: Int
-    name: String
+    id: Int!
+    name: String!
     phone: String
     rollNo: Int
+    address: Address
 }

@@ -1,4 +1,4 @@
-package com.example.resolver;
+package com.example.resolver.mutation;
 
 import com.example.domain.Student;
 import com.example.service.StudentService;
