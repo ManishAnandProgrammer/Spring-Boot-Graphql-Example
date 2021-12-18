@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 @Service
 public class StudentService {
-    private static final AtomicInteger idCounter = new AtomicInteger(1);
+    private static final AtomicInteger idCounter = new AtomicInteger(0);
     private List<Student> students;
 
     public StudentService() {

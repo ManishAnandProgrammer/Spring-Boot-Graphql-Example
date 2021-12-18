@@ -9,7 +9,7 @@ graphql:
     exception-handlers-enabled: true
     context-setting: PER_REQUEST_WITH_INSTRUMENTATION
     async-mode-enabled: true
-    max-query-depth: 15
+    max-query-depth: 50
   playground:
     endpoint: /playground
     subscriptionEndpoint: /subscriptions
@@ -35,5 +35,23 @@ graphql:
         variables: variables.graphql
       variables:
         editorTheme: "solarized light"
+  voyager:
+    enabled: true
+    basePath: /
+    mapping: /voyager
+    endpoint: /graphql
+    cdn:
+      enabled: false
+      version: latest
+    pageTitle: Voyager
+    displayOptions:
+      skipRelay: true
+      skipDeprecated: true
+      rootType: Query
+      sortByAlphabet: false
+      showLeafFields: true
+      hideRoot: false
+    hideDocs: false
+    hideSettings: false
 
 
