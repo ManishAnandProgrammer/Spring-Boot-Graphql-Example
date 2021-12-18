@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
+import static com.example.util.Sleep.sleep;
+
 @Service
 public class StudentService {
     private static final AtomicInteger idCounter = new AtomicInteger(0);
@@ -18,6 +20,8 @@ public class StudentService {
     }
 
     public List<Student> getAllStudents() {
+        // create simulation of fetching list from db
+        sleep(100);
         return students;
     }
 
