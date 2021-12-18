@@ -1,5 +1,5 @@
-scalar String
 scalar Int
+scalar String
 
 schema {
     query: Query
@@ -13,17 +13,4 @@ type Query {
 
 type Mutation {
     saveStudent(studentInput: StudentInput): Student!
-}
-
-input StudentInput {
-    name: String!
-    phone: String!
-    rollNo: Int!
-}
-
-type Student {
-    id: Int
-    name: String
-    phone: String
-    rollNo: Int
 }

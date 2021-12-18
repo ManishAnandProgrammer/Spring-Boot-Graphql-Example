@@ -1,0 +1,12 @@
+input StudentInput {
+    name: String!
+    phone: String!
+    rollNo: Int!
+}
+
+type Student {
+    id: Int
+    name: String
+    phone: String
+    rollNo: Int
+}
