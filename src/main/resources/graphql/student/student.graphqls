@@ -2,6 +2,7 @@ input StudentInput {
     name: String!
     phone: String!
     rollNo: Int!
+    age: NonNegativeInt
 }
 
 type Student {
@@ -9,6 +10,7 @@ type Student {
     name: String!
     phone: String
     rollNo: Int
+    age: NonNegativeInt
     address: Address
     family: Family
 }

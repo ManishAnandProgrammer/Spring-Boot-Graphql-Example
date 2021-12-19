@@ -26,7 +26,7 @@ public class SpringBootGraphqlApplication {
 	}
 
 	@EventListener(ApplicationReadyEvent.class)
-	private void fillStudents() {
+	public void fillStudents() {
 		IntStream.range(1, 200).forEach(value -> {
 			Student student = new Student();
 			String fullName = faker.name().fullName();
@@ -34,6 +34,7 @@ public class SpringBootGraphqlApplication {
 			String phoneNumber = faker.phoneNumber().phoneNumber();
 			student.setPhone(phoneNumber);
 			student.setRollNo(value);
+			student.setAge(10);
 			studentService.save(student);
 		});
 	}

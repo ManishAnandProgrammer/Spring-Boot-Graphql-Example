@@ -1,5 +1,4 @@
-scalar Int
-scalar String
+scalar NonNegativeInt
 
 schema {
     query: Query
